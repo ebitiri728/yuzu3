@@ -60,17 +60,10 @@
 <link rel="dns-prefetch" href="//meta.wikimedia.org" />
 <link rel="dns-prefetch" href="login.wikimedia.org">
 </head>
-        <div class="search-box">
-<input type="hidden" name="title" value="特別:検索"/>
-        <input type="text" id="gennumberform"
-name="search" placeholder="Wikipedia内を検索" aria-label="Wikipedia内を検索" autocapitalize="sentences" title="Wikipedia内を検索 [f]" accesskey="f">
-<span class="search-box-icon-overlay"><span class="minerva-icon minerva-icon--search"></span>
-</span>
-</div>
-<button id="searchIcon" class="cdx-button cdx-button--size-large cdx-button--icon-only cdx-button--weight-quiet skin-minerva-search-trigger">
-<span class="minerva-icon minerva-icon--search"></span>
-<span>検索</span>
-</button>
+         <form name="myform" onsubmit="backend(event)">
+        <input type="text" id="gennumberform">
+            </form>
+</details><span>検索</span>
 </form>
 <nav class="minerva-user-navigation" aria-label="利用者のナビゲーション">
 
