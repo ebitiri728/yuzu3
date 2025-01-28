@@ -82,11 +82,12 @@ function backend(event) {
 <link rel="dns-prefetch" href="//meta.wikimedia.org" />
 <link rel="dns-prefetch" href="login.wikimedia.org">
 </head>
-            <div class="search-wrap03">
-  <input type="text" id="gennumberform" placeholder="Wikipedia内を検索">
-  <button type="button" id="gennumberform">検索</button>
-</div>
-
+            <search>
+<form action="search.php">
+<input type="search" name="q"　id="gennumberform">
+<input type="submit" id="gennumberform"　value="検索">
+</form>
+            </search>
 </details>
 </form>
 <nav class="minerva-user-navigation" aria-label="利用者のナビゲーション">
