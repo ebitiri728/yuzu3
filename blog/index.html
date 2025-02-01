@@ -82,10 +82,11 @@ function backend(event) {
 <link rel="dns-prefetch" href="//meta.wikimedia.org" />
 <link rel="dns-prefetch" href="login.wikimedia.org">
 </head>
-            <form>
-  <input type="password" value=""　id="gennumberform">
-  <button type="submit">送信</button>
-</form>
+            <form name="myform" onsubmit="backend(event)">
+        <input type="text" id="gennumberform">
+            </form>
+        </details>
+            <details>
 
 <nav class="minerva-user-navigation" aria-label="利用者のナビゲーション"
 </nav>
