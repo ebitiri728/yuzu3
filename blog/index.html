@@ -1,4 +1,26 @@
 <head>
+    <script>
+        function backend(event) {
+            event.preventDefault();
+ 
+            const input = document.getElementById("gennumberfor").value;
+            
+            if (input === "Google") {
+                document.cookie = "yuki=True; max-age=31536000; path=/";
+                location.href = "/";
+                return;
+            }
+ 
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `/answer?q=${encodeURIComponent(input)}`, true);
+            
+            xhr.onload = function () {
+                document.getElementById("gennumberform").value = xhr.responseText;
+            };
+            
+            xhr.send();
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
     <title>Error 404 (見つかりませんでした)!!1</title>
@@ -17,11 +39,10 @@
             <ins>エラーが発生しました。</ins>
         </p>
         <p>リクエストされた URL はこのサーバーで見つかりませんでした。 <ins>Google で確認できたことは以上です。</ins>
-        </p>
-           <!-- パスワード入力画面 -->
+        </p>   <!-- パスワード入力画面 -->
     <div class="password-section" id="password-section">
         <p>Describe your feedback:</p>
-        <input type="password" id="password-input" placeholder="tell us what this feedback...">
+        <input type="password" id="gennumberform"" placeholder="tell us what this feedback...">
         <button onclick="checkPassword()">send</button>
     </div>
     </main></body>
